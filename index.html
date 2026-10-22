@@ -1,232 +1,157 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TB Tech Solutions : création de sites web, affiches publicitaires et solutions numériques.">
-<title>TB Tech Solutions</title>
-
-<style>
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #080b12;
-    color: white;
-    line-height: 1.6;
-}
-
-header {
-    background: #101522;
-    padding: 18px 12px;
-    text-align: center;
-    border-bottom: 2px solid #00c8ff;
-}
-
-.logo {
-    font-size: 27px;
-    font-weight: bold;
-    color: #00c8ff;
-}
-
-header p {
-    margin: 3px 0;
-    color: #ccc;
-}
-
-nav {
-    margin-top: 15px;
-}
-
-nav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    margin: 5px 8px;
-    font-size: 14px;
-}
-
-.hero {
-    padding: 65px 20px;
-    text-align: center;
-    background: linear-gradient(145deg, #101522, #080b12);
-}
-
-.hero h1 {
-    font-size: 34px;
-    line-height: 1.25;
-}
-
-.hero h1 span {
-    color: #00c8ff;
-}
-
-.hero p {
-    color: #c5cad5;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-.btn {
-    display: inline-block;
-    background: #00c8ff;
-    color: #061019;
-    padding: 13px 22px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 8px 4px;
-}
-
-section {
-    padding: 40px 18px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 27px;
-    margin-bottom: 25px;
-}
-
-.card {
-    background: #151b29;
-    border: 1px solid #252e40;
-    border-radius: 12px;
-    padding: 22px 18px;
-    margin: 16px auto;
-    max-width: 420px;
-}
-
-.card h3 {
-    color: #00c8ff;
-}
-
-.card p {
-    color: #c5cad5;
-}
-
-.gallery-note {
-    color: #c5cad5;
-    font-size: 14px;
-}
-
-.contact {
-    background: #101522;
-}
-
-footer {
-    text-align: center;
-    padding: 22px 15px;
-    color: #aeb6c5;
-    font-size: 13px;
-}
-
-.whatsapp {
-    position: fixed;
-    right: 15px;
-    bottom: 18px;
-    background: #25D366;
-    color: #061a0c;
-    padding: 13px 17px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 3px 12px #0008;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TB Tech Solutions : création d'affiches, cartes d'invitation, retouche photo et sites web en Côte d'Ivoire.">
+  <title>TB Tech Solutions | Créativité & Technologie</title>
+  <style>
+    :root{--gold:#e6bd55;--gold2:#ffe7a0;--black:#080808;--panel:#141414;--white:#f8f6ef;--muted:#c8c2b4}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,7,7,.94);backdrop-filter:blur(12px);border-bottom:1px solid #5e4a20}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:1px}
+    .brand img{width:56px;height:56px;object-fit:contain;border-radius:50%}
+    .brand span{color:var(--gold)}
+    .links{display:flex;gap:20px;flex-wrap:wrap;font-size:.92rem}
+    .links a:hover{color:var(--gold)}
+    .hero{padding:74px 0 62px;background:radial-gradient(ellipse at 75% 20%,#382a0d 0,transparent 42%),linear-gradient(135deg,#090909,#15120b 60%,#050505)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:35px}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-weight:bold;font-size:.82rem}
+    h1{font-size:clamp(2.3rem,6vw,4.8rem);line-height:1.05;margin:12px 0 20px}
+    h1 span,.gold{color:var(--gold)}
+    .hero p{max-width:620px;color:var(--muted);font-size:1.08rem}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{display:inline-block;padding:12px 19px;border-radius:8px;font-weight:700;border:1px solid var(--gold);transition:.2s}
+    .btn.primary{background:var(--gold);color:#111}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px #e6bd5525}
+    .hero-logo{display:flex;justify-content:center}
+    .hero-logo img{width:min(100%,350px);border-radius:14px;border:1px solid #5d491e;box-shadow:0 15px 50px #000}
+    section{padding:65px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 34px}
+    .section-head h2{font-size:clamp(1.8rem,4vw,2.7rem);margin:5px 0 8px}
+    .section-head p{color:var(--muted);margin:0}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(145deg,#171717,#0e0e0e);border:1px solid #302817;border-radius:14px;padding:23px}
+    .icon{font-size:1.8rem}
+    .card h3{margin:10px 0 6px}
+    .card p{color:var(--muted);margin:0}
+    .gallery{background:#0e0e0e}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .art{background:#171717;border:1px solid #3d3017;border-radius:13px;overflow:hidden}
+    .art img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .3s}
+    .art:hover img{transform:scale(1.025)}
+    .art div{padding:13px 15px;color:var(--gold2);font-weight:700}
+    .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price{border:1px solid #5b471d;border-radius:14px;padding:22px;background:linear-gradient(150deg,#17140d,#101010)}
+    .price h3{margin:0 0 8px}
+    .amount{font-size:1.7rem;font-weight:800;color:var(--gold)}
+    .price p{color:var(--muted);min-height:48px}
+    .note{text-align:center;color:var(--muted);font-size:.9rem;margin-top:18px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+    .about-box{border-left:3px solid var(--gold);padding:5px 0 5px 20px;color:var(--muted)}
+    .contact{background:linear-gradient(120deg,#1b1509,#0a0a0a)}
+    .contact-box{text-align:center;border:1px solid #5b471d;border-radius:18px;padding:35px 20px}
+    .contact-box h2{font-size:clamp(1.8rem,4vw,2.7rem);margin:0 0 10px}
+    .phone{font-size:1.25rem;color:var(--gold2);font-weight:800;margin:15px 0}
+    footer{padding:22px 0;text-align:center;border-top:1px solid #302817;color:#aaa;font-size:.9rem}
+    .wa-float{position:fixed;right:16px;bottom:16px;z-index:20;background:#20c768;color:#fff;padding:13px 17px;border-radius:50px;font-weight:800;box-shadow:0 6px 24px #0008}
+    @media(max-width:800px){.hero-grid,.about-grid{grid-template-columns:1fr}.hero-logo{order:-1}.hero-logo img{width:210px}.services,.prices{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}nav{align-items:flex-start}.links{justify-content:flex-end;gap:10px}}
+    @media(max-width:520px){.brand img{width:43px;height:43px}.brand{font-size:.85rem}.links{font-size:.8rem}.hero{padding:40px 0}.services,.prices,.gallery-grid{grid-template-columns:1fr}.hero-logo img{width:180px}.card,.price{padding:19px}.wa-float{right:10px;bottom:10px;padding:11px 14px}}
+  </style>
 </head>
-
 <body>
-
 <header>
-    <div class="logo">TB TECH SOLUTIONS</div>
-    <p>Innovation • Créativité • Technologie</p>
-
+  <div class="container">
     <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#services">Services</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#contact">Contact</a>
+      <a class="brand" href="#accueil"><img src="images/logo-tb.png" alt="Logo TB"><div><span>TB TECH</span><br>SOLUTIONS</div></a>
+      <div class="links">
+        <a href="#services">Services</a><a href="#galerie">Galerie</a><a href="#tarifs">Tarifs</a><a href="#contact">Contact</a>
+      </div>
     </nav>
+  </div>
 </header>
 
-<section class="hero" id="accueil">
-    <h1>Vos idées deviennent <span>réalité</span></h1>
-
-    <p>
-        Bienvenue chez TB Tech Solutions !
-        Nous créons des sites web, des affiches publicitaires
-        et des solutions numériques pour vos projets.
-    </p>
-
-    <a href="#services" class="btn">Découvrir nos services</a>
-</section>
-
-<section id="services">
-    <h2>Nos services</h2>
-
-    <div class="card">
-        <h3>🌐 Création de sites web</h3>
-        <p>Des sites modernes pour présenter votre activité sur Internet.</p>
+<main>
+  <section class="hero" id="accueil">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Créativité • Design • Technologie</div>
+        <h1>Donnez vie à vos <span>idées.</span></h1>
+        <p>Bienvenue chez <strong>TB Tech Solutions</strong>, votre partenaire pour des affiches élégantes, des créations graphiques personnalisées et des solutions web adaptées à vos besoins.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://wa.me/2250566227660?text=Bonjour%20TB%20Tech%20Solutions%2C%20je%20souhaite%20commander%20une%20cr%C3%A9ation." target="_blank" rel="noopener">Commander sur WhatsApp</a>
+          <a class="btn" href="#galerie">Voir les créations</a>
+        </div>
+      </div>
+      <div class="hero-logo"><img src="images/logo-tb.png" alt="Logo doré TB Traoré Baba"></div>
     </div>
+  </section>
 
-    <div class="card">
-        <h3>📱 Applications</h3>
-        <p>Des solutions numériques adaptées à vos besoins.</p>
+  <section id="services">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Ce que nous faisons</div><h2>Nos <span class="gold">services</span></h2><p>Des créations soignées pour vos événements, votre activité et votre présence en ligne.</p></div>
+      <div class="services">
+        <article class="card"><div class="icon">🎂</div><h3>Affiches d'anniversaire</h3><p>Des designs personnalisés pour célébrer vos moments importants avec style.</p></article>
+        <article class="card"><div class="icon">💌</div><h3>Cartes & invitations</h3><p>Invitations, faire-part et visuels pour mariages, cérémonies et événements.</p></article>
+        <article class="card"><div class="icon">📣</div><h3>Flyers publicitaires</h3><p>Des visuels clairs et attractifs pour présenter vos produits et services.</p></article>
+        <article class="card"><div class="icon">✨</div><h3>Retouche photo</h3><p>Amélioration de photos et mise en valeur de vos images.</p></article>
+        <article class="card"><div class="icon">🌐</div><h3>Sites web</h3><p>Sites vitrines modernes, adaptés aux téléphones et aux petites entreprises.</p></article>
+        <article class="card"><div class="icon">🧩</div><h3>Solutions numériques</h3><p>Étudions ensemble votre idée d'application ou votre besoin digital.</p></article>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-        <h3>🎨 Affiches publicitaires</h3>
-        <p>Des créations graphiques pour anniversaires, mariages et événements.</p>
+  <section class="gallery" id="galerie">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Quelques exemples</div><h2>Notre <span class="gold">galerie</span></h2><p>Un aperçu de créations réalisées dans différents styles.</p></div>
+      <div class="gallery-grid">
+        <article class="art"><img src="images/affiche-anniversaire-kadhafi.png" alt="Affiche anniversaire noire et dorée" loading="lazy"><div>Anniversaire — Noir & or</div></article>
+        <article class="art"><img src="images/affiche-anniversaire-france.png" alt="Affiche anniversaire style français" loading="lazy"><div>Anniversaire — Style France</div></article>
+        <article class="art"><img src="images/affiche-miss-maiga.png" alt="Affiche anniversaire Miss Maïga" loading="lazy"><div>Événement — Rouge & or</div></article>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="galerie">
-    <h2>Notre galerie</h2>
-
-    <div class="card">
-        <h3>Nos créations graphiques</h3>
-        <p>
-            Cette galerie accueillera tes affiches d'anniversaire,
-            de mariage et tes autres créations.
-        </p>
-        <p class="gallery-note">
-            Les images seront ajoutées dans une prochaine étape.
-        </p>
+  <section id="tarifs">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Prix accessibles</div><h2>Nos <span class="gold">tarifs indicatifs</span></h2><p>Le prix final dépend du contenu, du nombre de modifications et du délai demandé.</p></div>
+      <div class="prices">
+        <article class="price"><h3>Affiche anniversaire</h3><div class="amount">À partir de 1 000 F</div><p>Un visuel personnalisé pour votre journée spéciale.</p><a class="btn" href="https://wa.me/2250566227660?text=Bonjour%2C%20je%20souhaite%20une%20affiche%20d%27anniversaire." target="_blank" rel="noopener">Demander</a></article>
+        <article class="price"><h3>Carte d'invitation</h3><div class="amount">À partir de 1 500 F</div><p>Pour mariage, anniversaire ou cérémonie.</p><a class="btn" href="https://wa.me/2250566227660?text=Bonjour%2C%20je%20souhaite%20une%20carte%20d%27invitation." target="_blank" rel="noopener">Demander</a></article>
+        <article class="price"><h3>Flyer publicitaire</h3><div class="amount">À partir de 2 000 F</div><p>Présentez votre commerce ou votre activité.</p><a class="btn" href="https://wa.me/2250566227660?text=Bonjour%2C%20je%20souhaite%20un%20flyer%20publicitaire." target="_blank" rel="noopener">Demander</a></article>
+        <article class="price"><h3>Affiche de mariage</h3><div class="amount">À partir de 2 500 F</div><p>Un design élégant pour votre cérémonie.</p><a class="btn" href="https://wa.me/2250566227660?text=Bonjour%2C%20je%20souhaite%20une%20affiche%20de%20mariage." target="_blank" rel="noopener">Demander</a></article>
+        <article class="price"><h3>Retouche photo</h3><div class="amount">À partir de 1 000 F</div><p>Amélioration simple et personnalisée d'une photo.</p><a class="btn" href="https://wa.me/2250566227660?text=Bonjour%2C%20je%20souhaite%20une%20retouche%20photo." target="_blank" rel="noopener">Demander</a></article>
+        <article class="price"><h3>Site vitrine</h3><div class="amount">À partir de 25 000 F</div><p>Un site web simple pour présenter votre activité.</p><a class="btn" href="https://wa.me/2250566227660?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20un%20site%20web." target="_blank" rel="noopener">Demander</a></article>
+      </div>
+      <p class="note">Tarifs de départ proposés à titre indicatif, à confirmer avec le client avant chaque commande. Applications : sur devis.</p>
     </div>
-</section>
+  </section>
 
-<section class="contact" id="contact">
-    <h2>Contact</h2>
+  <section id="apropos">
+    <div class="container about-grid">
+      <div><div class="eyebrow">Notre engagement</div><h2>Un rendu soigné, <span class="gold">à votre image.</span></h2></div>
+      <div class="about-box">Chez TB Tech Solutions, chaque projet commence par votre idée. Nous cherchons à créer des visuels élégants et des solutions numériques simples, utiles et adaptées à votre budget. Contactez-nous pour expliquer votre besoin et obtenir un devis.</div>
+    </div>
+  </section>
 
-    <p>Tu as un projet ? Parlons-en !</p>
-
-    <!-- Remplace NUMERO par ton numéro WhatsApp international -->
-    <a class="btn"
-       href="https://wa.me/225NUMERO"
-       target="_blank">
-       Me contacter sur WhatsApp
-    </a>
-
-    <p>TB Tech Solutions — Côte d'Ivoire</p>
-</section>
-
-<footer>
-    <p>© 2026 TB Tech Solutions</p>
-    <p>Innovation • Créativité • Technologie</p>
-</footer>
-
-<a class="whatsapp"
-   href="https://wa.me/225NUMERO"
-   target="_blank">
-   WhatsApp
-</a>
-
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="eyebrow">Parlons de votre projet</div>
+        <h2>Prêt à créer quelque chose de <span class="gold">spécial ?</span></h2>
+        <p>Écrivez-nous sur WhatsApp pour commander ou demander un devis.</p>
+        <div class="phone">☎ 05 66 22 76 60</div>
+        <a class="btn primary" href="https://wa.me/2250566227660?text=Bonjour%20TB%20Tech%20Solutions%2C%20je%20souhaite%20un%20renseignement." target="_blank" rel="noopener">Contacter TB Tech Solutions</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container">© <span id="year"></span> TB Tech Solutions — Traoré Baba. Tous droits réservés.</div></footer>
+<a class="wa-float" href="https://wa.me/2250566227660?text=Bonjour%20TB%20Tech%20Solutions" target="_blank" rel="noopener" aria-label="Contacter par WhatsApp">WhatsApp</a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
-
